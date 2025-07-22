@@ -35,3 +35,9 @@ cusFun();
 import halo, { namai } from "./kombinasi.js";
 halo("Ukhasyah");
 namai();
+
+////// TEST
+import * as mod from "./module.js";
+console.log(mod.name);
+console.log(mod.nameInArray);
+mod.sayHello();
