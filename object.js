@@ -18,7 +18,6 @@ const Account = {
   saldo: 2000,
 };
 
-
 Account.saldo = 2000000;
 console.log(Account.saldo);
 

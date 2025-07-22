@@ -11,8 +11,8 @@ const num = new Array();
 const num4 = new Array(4);
 
 // membuat array menggunakan Array.from.
-const foo = Array.from("foo"); // [f,o,o]
-console.log(foo);
+const foo = Array.from("foo");
+console.log(foo); // [f,o,o]
 
 /* Array.from merupakan method
  untuk membuat array yang 
@@ -36,7 +36,7 @@ const literal = [];
 
 // Akses elemen array
 const myArr = [10, 20, 30, 40];
-console.log(myArr[1]);
+console.log(myArr[1]); // 20
 
 // Manipulasi nilai array
 myArr[0] = 15;
@@ -78,3 +78,13 @@ console.log(lang.reverse());
 // Sort : Urutin nilai array (a - z)
 lang.sort();
 console.log(lang);
+
+const p = ["JS", "PHP", "Python"];
+p.splice(2, 1); // JS , PHP,
+console.log(p);
+
+const push = [1, 2, 3];
+push.shift(); // 2, 3
+push.pop(); //2
+
+console.log(push);
