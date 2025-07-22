@@ -30,3 +30,8 @@ import { fun as userFun } from "./user.mjs";
 import { fun as cusFun } from "./customer.js";
 userFun();
 cusFun();
+
+// Kombinasikan antara default export dan named export
+import halo, { namai } from "./kombinasi.js";
+halo("Ukhasyah");
+namai();
