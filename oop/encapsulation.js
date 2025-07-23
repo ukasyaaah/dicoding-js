@@ -22,7 +22,7 @@ class Tiket {
   }
 
   get jadwal() {
-    return this.#jadwal;
+    return this.jadwal;
   }
 }
 
