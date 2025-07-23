@@ -1,7 +1,7 @@
 // @flow
 const myNama = "Ukhasyah";
 
-function greet(name: number) {
+function greet(name) {
   console.log(`Hello, ${name}. My name is ${myNama}`);
 }
 

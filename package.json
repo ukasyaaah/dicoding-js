@@ -22,6 +22,8 @@
   "devDependencies": {
     "flow-bin": "^0.276.0",
     "flow-remove-types": "^2.276.0",
-    "typescript": "^5.8.3"
-  }
+    "typescript": "^5.8.3",
+    "@types/bun": "latest"
+  },
+  "private": true
 }
