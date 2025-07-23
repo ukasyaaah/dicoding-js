@@ -1,4 +1,4 @@
-import { API, sampleErrorData, sampleSuccessData } from './support.mjs';
+import { API, sampleErrorData, sampleSuccessData } from "./support.mjs";
 
 /**
  * TODO:
@@ -10,9 +10,14 @@ import { API, sampleErrorData, sampleSuccessData } from './support.mjs';
  * - `data` merupakan array of object dengan struktur { delay, simulateError }.
  * - Jalankan kode untuk melihat contoh nilai argumen `data`
  */
-function processData(data) {
-  // kode di bawah hanya untuk melihat nilai data. Silakan hapus untuk menjawab kuis.
-  return Promise.resolve(data);
+async function processData(data) {
+  const prom = await data.map(({ delay, simulateError }) =>
+    API.fetch(delay, simulateError)
+);
+// return Promise.resolve(data);
+
+  const result = Promise.all(prom);
+  return result;
 }
 
 processData(sampleErrorData).then(console.log).catch(console.log); // Throw exception: Error from delay 50

@@ -1,46 +1,50 @@
-export function makeCoffee(callback) {
-  const estimasi = 5000;
-  let isSuccess = false;
+export function makeCoffee(name) {
+  return new Promise((resolve, reject) => {
+    const estimasi = 2000;
+    let isSuccess = false;
 
-  const detik = Math.ceil(estimasi / 1000);
-  console.log(`Mohon tunggu, Sedang dibuat dalam ${detik} detik`);
+    const detik = Math.ceil(estimasi / 1000);
+    console.log(`Mohon tunggu, Sedang dibuat dalam ${detik} detik`);
 
-  setTimeout(() => {
-    const number = Math.random();
-    if (number > 0.3) {
-      isSuccess = true;
-    }
+    setTimeout(() => {
+      const number = Math.random();
+      if (number > 0.3) {
+        isSuccess = true;
+      }
 
-    if (!isSuccess) {
-      callback(new Error("Gagal Bikinin Kopi"), null);
-      return;
-    }
+      if (!isSuccess) {
+        reject(new Error("Gagal Bikinin Kopi"));
+        return;
+      }
 
-    console.log("Kopi Sudah Jadi");
-    callback(null , name);
-  }, estimasi);
+      console.log("Kopi Sudah Jadi");
+      resolve(name);
+    }, estimasi);
+  });
 }
 
-export function sendCoffee(callback) {
-  const estimasi = 2000;
-  let isSuccess = false;
+export function sendCoffee(name) {
+  return new Promise((resolve, reject) => {
+    const estimasi = 5000;
+    let isSuccess = false;
 
-  const detik = Math.ceil(estimasi / 1000);
+    const detik = Math.ceil(estimasi / 1000);
 
-  console.log(`Kopi Sedang di kirim dalam ${detik} detik`);
+    console.log(`Kopi Sedang di kirim dalam ${detik} detik`);
 
-  setTimeout(() => {
-    const angka = Math.random();
-    if (angka > 0.3) {
-      isSuccess = true;
-    }
+    setTimeout(() => {
+      const angka = Math.random();
+      if (angka > 0.3) {
+        isSuccess = true;
+      }
 
-    if (!isSuccess) {
-      console.log("Kopi gagal diantar");
-      return;
-    }
+      if (!isSuccess) {
+        reject(new Error("Kopi gagal diantar"));
+        return;
+      }
 
-    console.log("Kopi udah sampai ke meja");
-    callback();
-  }, estimasi);
+      console.log("Kopi udah sampai ke meja");
+      resolve(name);
+    }, estimasi);
+  });
 }
