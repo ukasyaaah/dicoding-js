@@ -4,7 +4,8 @@
   "description": "",
   "main": "array.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/ukasyaaah/dicoding-js/issues"
   },
-  "homepage": "https://github.com/ukasyaaah/dicoding-js#readme"
+  "homepage": "https://github.com/ukasyaaah/dicoding-js#readme",
+  "devDependencies": {
+    "flow-bin": "^0.276.0",
+    "flow-remove-types": "^2.276.0",
+    "typescript": "^5.8.3"
+  }
 }
